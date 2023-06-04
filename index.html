@@ -169,6 +169,7 @@
           inner();
       });
 
+      // Continue Step 2
       // Step 4 - Throw and Custom Errors
       class MyError extends Error{
         constructor(message){
@@ -179,7 +180,8 @@
       errorBtns[14].addEventListener("click", (e) => {
           throw new MyError("Sadly an error happened my friend");
       });
-
+      
+      // Continue Step 2
       // Step 5 - The Global Error handler and 3rd Party Tracking
       window.onerror = function logError(){
         console.log('you found this error!')
